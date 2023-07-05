@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Monstserrat", 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CSS untuk header */
+/* Mengatur ukuran dan posisi header */
+header {
+  /* width: 100%; */
+  background-image: url('/image/Background.jpg');
+  /* "Designed by starline / Freepik" */
+  background-size: cover;
+  /* Mengatur ukuran gambar menjadi cover */
+  background-position: center center;
+  /* Mengatur posisi gambar menjadi di tengah-tengah */
+  padding: 30px;
+  /* Padding untuk ruang dalam header */
+  margin-bottom: 10px;
+}
+
+/* Mengatur posisi brand */
+.brand {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  /* Mengatur wrap jika lebar layar kurang dari 768px */
+}
+
+/* Mengatur gambar brand */
+.brand img {
+  width: 160px;
+  /* Ukuran lebar gambar brand */
+  height: auto;
+  /* Tinggi gambar brand otomatis disesuaikan */
+  margin-right: 20px;
+}
+
+/* Mengatur judul dan subjudul brand */
+.brand-title {
+  margin-left: 10px;
+  position: relative;
+  text-align: left;
+  /* Mengatur teks menjadi kiri*/
+}
+
+.brand-title h1 {
+  font-size: 35px;
+  margin: 0;
+  color: #fff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-title h1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  /* Mengatur posisi garis lurus di bawah h1 */
+  left: 0;
+  right: 0;
+  border-bottom: 3px solid #fff;
+  /* Mengatur ketebalan garis menjadi 3px */
+  border-radius: 50px;
+  /* Mengatur ujung garis menjadi rounded */
+  /* transform: scaleX(1); */
+  transform-origin: left;
+  width: 50%;
+  /* Mengatur panjang garis lurus menjadi 50% dari lebar h1 */
+}
+
+.brand-title h3 {
+  font-size: 24px;
+  margin: 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 5, 10, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Padding top */
+.padding-top-20 {
+  padding-top: 20px;
+}
+
+/* CSS untuk tables (File show dll) */
+/* Mengatur tampilan tabel */
+.tables {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+}
+
+/* Mengatur tampilan header tabel */
+.tables thead th {
+  font-weight: bold;
+  background-color: #f8f9fa;
+  color: #212529;
+  border-color: #dee2e6;
+}
+
+/* Mengatur tampilan konten tabel */
+.tables tbody td {
+  vertical-align: middle;
+  border-color: #dee2e6;
+}
+
+/* Mengatur tampilan baris konten tabel */
+.tables tbody tr {
+  background-color: #ffffff;
+}
+
+/* Mengatur tampilan sel dalam konten tabel */
+.tables tbody td {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Mengatur tampilan sel header tabel */
+.tables thead th {
+  padding: .75rem;
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+th.align-middle {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* penyesuaian tinggi sesuai kebutuhan */
+}
+
+/* CSS untuk my-table (File Perhitungan) */
+/* Mengatur margin, lebar tabel, dan margin bawah */
+.my-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Mengatur latar belakang header tabel */
+.my-table thead {
+  background-color: lightgray;
+}
+
+/* Mengatur atribut dasar pada sel tabel */
+.my-table th,
+.my-table td {
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid black;
+}
+
+/* CSS untuk halaman Login */
+.containers {
+  background-image: url('/image/Background - Copy.jpg');
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.line {
+  width: 50%;
+  border-bottom: 5px solid white;
+  margin: auto;
+}
+
+.container-login {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  max-width: 800px;
+  padding: 30px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+/* Gaya tampilan untuk perangkat Android */
+@media screen and (max-width: 768px) {
+
+  /* Header */
+  .brand {
+    flex-direction: column;
+    /* Mengatur tampilan menjadi kolom */
+  }
+
+  .brand img {
+    margin: 0;
+    /* Mengatur margin gambar menjadi 0 pada tampilan layar kurang dari 768px */
+  }
+
+  .brand-title {
+    margin: 10px 0;
+    /* Mengatur margin atas dan bawah pada tampilan layar kurang dari 768px */
+    text-align: center;
+    /* Mengatur teks menjadi tengah */
+  }
+
+  .brand-title h1::before {
+    content: none;
+    /* Menghapus garis lurus di bawah h1 pada tampilan layar kurang dari 768px */
+  }
+
+  img {
+    width: 45%;
+    height: auto;
+  }
+
+  .containers img {
+    width: 45%;
+  }
+
+  .container-login {
+    width: 70%;
+    margin: auto;
+  }
+
+  /* tampilan button desktop hilang */
+  #desktop-button {
+    display: none;
+  }
+}
+
+/* tampilan button mobile hilang */
+@media (min-width: 769px) {
+  #mobile-button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .containers img {
+    width: 420px;
+  }
+}
+

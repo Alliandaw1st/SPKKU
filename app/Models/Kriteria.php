@@ -1,0 +1,34 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Kriteria extends Model
+{
+    use HasFactory;
+    protected $table = "kriteria";
+    protected $fillable = [
+        'nama',
+        'bobot',
+        'tipe'
+    ];
+
+    public function subKriteria()
+    {
+        return $this->hasMany(SubKriteria::class);
+    }
+
+    public function alternatifKriteriaSubkriteria()
+    {
+        return $this->hasMany(AlternatifKriteriaSubkriteria::class, 'kriteria_id');
+    }
+    
+    // aturan validasi (jika diperlukan)
+    public static $rules = [
+        'nama' => 'required',
+        'bobot' => 'required|numeric|min:0',
+        'tipe' => 'required'
+    ];
+}
