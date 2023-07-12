@@ -16,7 +16,9 @@
 
 <body>
     <!-- Masukkan kode untuk header, navbar, atau elemen lain yang diperlukan untuk tampilan Anda -->
-    @include('layouts.komponen.header')
+    @if (!Request::is('moora/laporan'))
+        @include('layouts.komponen.header')
+    @endif
 
     <div class="container">
         @if (Auth::check())

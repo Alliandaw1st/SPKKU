@@ -184,6 +184,11 @@ th.align-middle {
   width: 50%;
 }
 
+.grayscale-img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%); /* Untuk dukungan browser Webkit */
+}
+
 /* Gaya tampilan untuk perangkat Android */
 @media screen and (max-width: 768px) {
 

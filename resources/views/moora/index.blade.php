@@ -156,6 +156,48 @@
                 <div class="modal-body">
                     <h2 class="text-center">Rincian Tambahan</h2>
                     <hr>
+                    <!-- Keterangan Kriteria -->
+                    <h5 class="mx-3">Keterangan Kode Kriteria</h5>
+                    <table class="my-table">
+                        <thead>
+                            <tr>
+                                <th>Kode</th>
+                                <th>Keterangan</th>
+                                {{-- <th>Tipe</th>
+                                <th>Bobot</th> --}}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($kriteria as $k)
+                                <tr>
+                                    <td>C{{ $loop->iteration }}</td>
+                                    <td>{{ $k->nama }}</td>
+                                    {{-- <td>{{ $k->tipe }}</td>
+                                    <td>{{ number_format($tabelBobot[$k->id], 2) }}</td> --}}
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+
+                    <!-- Keterangan Alternatif -->
+                    <h5 class="mx-3">Keterangan Kode Alternatif</h5>
+                    <table class="my-table">
+                        <thead>
+                            <tr>
+                                <th>Kode</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($alternatif as $index => $a)
+                                <tr>
+                                    <td>A{{ $index + 1 }}</td>
+                                    <td>{{ $a->nama }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+
                     <!-- Tahap 1.1: Menghitung Kuadrat Matriks -->
                     <h5 class="mx-3">Tahap 1.1: Menghitung Kuadrat Matriks</h5>
                     <table class="my-table">
@@ -226,7 +268,7 @@
                     <table class="my-table">
                         <thead>
                             <tr>
-                                <th>Alternatif</th>
+                                <th>Kriteria</th>
                                 @foreach ($kriteria as $k)
                                     <th>C{{ $loop->iteration }}</th>
                                 @endforeach
